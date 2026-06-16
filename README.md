@@ -11,23 +11,17 @@ This README.md serves as an Table of Contents.
 - [Install dependencies](chapters/Install_dependencies.md)
 - [Install NEMO v5.0](chapters/Install_NEMO.md)
 - [eORCA1 configuration setup](chapters/eOrca1_base)
-- 
+
 > [!WARNING]
 > In the following, we will make systematically use of some folder location. To ease the process, you are invited to define the main folders are environment variables, like
 > ```shell
-> # Let's base ourselves in the base directory
-> ROOT=$HOME
-> # Echo where we work
-> echo $ROOT
-> 
-> # Installation directories
-> export WORKDIR=$ROOT/nemo-deps/sources
-> export INSTDIR=$ROOT/nemo-deps/installs
-> export XIOSDIR=$ROOT/nemo-deps/XIOS
-> export NEMODIR=$ROOT
+> # Source, installation, xios and work directories
+> export SRCSDIR=$HOME/nemo-deps/sources
+> export INSTDIR=$HOME/nemo-deps/installs
+> export XIOSDIR=$HOME/nemo-deps/XIOS/xios-trunk
+> export WORKDIR=$HOME/nemo-AGRIF
 > ```
-
- 
+> so that we can refer to the same directory tree.
  
  # AGRIF
  ## Defining the nesting hierarchy
