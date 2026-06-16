@@ -145,3 +145,25 @@ Finally, copy all the important files into the `EXP00` folder of your configurat
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/domain_cfg.nc .
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/AGRIF_FixedGrids.in .
 ```
+# Pacific Ocean refinement
+
+# Atlantic Ocean refinement
+
+# Atlantic-Mediterranean refinement
+Set up the `DOMAINcfg` configuration as
+```shell
+cp -r ./tools/DOMAINcfg/cfgs/AGRIF_DEMO ./tools/DOMAINcfg/cfgs/AtlaMed
+```
+copy the `domain_cfg.nc` file inside the configuration folder, link the `GEBCO_2020.nc` file in 
+```shell
+cp $WORKDIR/input-eOrca1/input_fields/domain_cfg.nc $TOOLDIR/DOMAINcfg/cfgs/AtlaMed/
+ln -sf $WORKDIR/input-AGRIF/GEBCO_2020.nc $TOOLDIR/DOMAINcfg/cfgs/AtlaMed/
+```
+and define the `AGRIF_FixedGrids.in` as
+```shell
+1
+185 330 208 265 4 4 4
+1
+260 425 73 147 3 3 3
+0
+```
