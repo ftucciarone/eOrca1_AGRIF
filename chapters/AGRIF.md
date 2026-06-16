@@ -196,6 +196,7 @@ and define the `AGRIF_FixedGrids.in` as
 360 567 98 195 3 3 3
 0
 ```
+<p align="center">
+  <img src="figures/output_AtlaMed.png" />
+</p>
 
-
-https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/figures/output_AtlaMed.png
