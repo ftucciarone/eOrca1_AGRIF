@@ -5,8 +5,9 @@
 - [The safe way: use a Docker container](Docker.md)
 
 <table style="width:1000px; margin:0 auto;">
-  <tr><td> <b> Previous page </b></td> <td> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/AGRIF.md">Install NEMO v5.0</a> </td>
+  <tr><td class="alignLeft"> <b> Previous page </b></td> 
       <td class="alignRight">Right aligned stuff</td></tr>
+  <tr><td> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/AGRIF.md">Install NEMO v5.0</a> </td></tr>
 </table>
 
 
