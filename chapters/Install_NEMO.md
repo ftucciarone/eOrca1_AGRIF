@@ -1,13 +1,14 @@
+<table style="width: 100%;">
+  <tr><td>Left aligned stuff</td>
+      <td class="alignRight">Right aligned stuff</td></tr>
+</table>
+
+
 **Prerequisites:**
 - [Install dependencies](Install_dependencies.md)
 - [The safe way: use a Docker container](Docker.md)
 
-<span class="right">
- Right aligned
-</span>
-<span class="left">
- Left aligned
-</span>​
+​
 
 
 # Downloading and compiling NEMO 5.0.1
