@@ -1,7 +1,9 @@
-<table style="width: 100%;">
-  <tr><td>Left aligned stuff</td>
-      <td class="alignRight">Right aligned stuff</td></tr>
-</table>
+<p style="text-align:left;">
+    This text is left aligned
+    <span style="float:right;">
+        This text is right aligned
+    </span>
+</p>
 
 
 **Prerequisites:**
