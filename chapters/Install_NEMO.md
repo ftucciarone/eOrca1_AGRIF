@@ -1,7 +1,5 @@
+<div style="float: left">This is on the left</div><div style="float: right">This is on the right</div><div style="clear: both;"></div>
 
-<div style="float: left">Left Text</div>
-<div style="float: right">Right Text</div>
-<div style="margin: 0 auto; width: 100px;">Centered Text</div>
 
 
 
