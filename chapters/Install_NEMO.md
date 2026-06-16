@@ -1,6 +1,3 @@
-<div style="float: left">This is on the left</div><div style="float: right">This is on the right</div><div style="clear: both;"></div>
-
-
 
 
 **Prerequisites:**
