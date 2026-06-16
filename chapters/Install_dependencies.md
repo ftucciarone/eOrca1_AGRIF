@@ -1,4 +1,4 @@
-<p align="right"> Go to the next steps:</p>
+<p align="right"> <b>Go to the next steps: </b></p>
 <p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/tree/main/chapters/Install_NEMO.md">Install NEMO v5.0</a> </p>
 
 # Nemo dependencies
@@ -255,6 +255,5 @@ make -j1
 ##make check
 make install
 ```
-
-**Go to the next steps:**
-- [Install NEMO v5.0](Install_NEMO.md)
+<p align="right"> <b>Go to the next steps: </b></p>
+<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/tree/main/chapters/Install_NEMO.md">Install NEMO v5.0</a> </p>
