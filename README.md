@@ -1,4 +1,4 @@
-# Nemo Hackaton 2025, an AGRIF journey
+# Building an eORCA 1$^{\circ}$ configuration with AGRIF zooms
 <p align="center">
   <img src="figures/AGRIF_DEMO_v4.2_no_cap.png" />
 </p>
