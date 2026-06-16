@@ -1,3 +1,8 @@
+<div style="text-align: right">
+**Go to the next steps:**
+- [Install NEMO v5.0](Install_NEMO.md)
+</div>
+
 # Nemo dependencies
 > [!WARNING]
 > *Lasciate ogne speranza, voi ch'intrate*
@@ -255,4 +260,3 @@ make install
 
 **Go to the next steps:**
 - [Install NEMO v5.0](Install_NEMO.md)
-- [Build test cases with SETTE](Sette.md)
