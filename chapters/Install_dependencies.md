@@ -1,6 +1,8 @@
-<p align="right">text</p>
+<p align="right">
+    **Go to the next steps:**
+    - [Install NEMO v5.0](Install_NEMO.md)
+</p>
 
-<div style="text-align: right">**Go to the next steps:** - [Install NEMO v5.0](Install_NEMO.md)</div>
 
 # Nemo dependencies
 > [!WARNING]
