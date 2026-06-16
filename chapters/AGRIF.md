@@ -145,6 +145,38 @@ Finally, copy all the important files into the `EXP00` folder of your configurat
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/domain_cfg.nc .
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/AGRIF_FixedGrids.in .
 ```
+## Templates for deciding the positioning of the zoom
+```python3
+#!/usr/bin/env python3
+import os
+import cmocean
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+from matplotlib.colors import LogNorm
+import netCDF4 as netcdf
+#
+# Open domain_cfg.nc eOrca1 (original grid)
+eOrca100_gridfile = "/home/ftucciarone/tethys/nemo-AGRIF/input-eOrca1/input_fields/domain_cfg.nc"
+eOrca100_grid = netcdf.Dataset(eOrca100_gridfile, "r", format="NETCDF4")
+
+imin = 185
+imax = 325
+jmin = 208
+jmax = 265
+
+# Read bathymetry for a visual check
+eOrca100_bathy = eOrca100_grid.variables["bathy_metry"][0]
+cropped = eOrca100_bathy[jmin:jmax,imin:imax]
+# Visual check
+plt.rcParams['figure.dpi'] = 250  
+fig, axes = plt.subplots(1, 2)
+axes[0].imshow(eOrca100_bathy[::-1,:], cmap="seismic", interpolation=None, norm=LogNorm(vmin=0.0001, vmax=6000))
+axes[1].imshow(cropped[::-1,:], cmap="seismic", interpolation=None, norm=LogNorm(vmin=0.0001, vmax=6000))
+plt.tight_layout()
+plt.show()
+```
+
 # Pacific Ocean refinement
 
 # Atlantic Ocean refinement
