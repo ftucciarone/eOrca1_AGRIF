@@ -1,4 +1,4 @@
-# Building an eORCA 1$`\sqrt{3x-1}+(1+x)^2`$ configuration with AGRIF zooms
+# Building an eORCA $`1^{2}`$ configuration with AGRIF zooms
 <p align="center">
   <img src="figures/AGRIF_DEMO_v4.2_no_cap.png" />
 </p>
