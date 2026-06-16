@@ -4,7 +4,7 @@
   <tr><td class="alignLeft"> <b> Previous page </b></td> 
       <td class="alignRight"> <b> Next page </b></td></tr>
   <tr><td> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/Install_dependencies.md">Install NEMO v5.0</a> </td>
-      <td> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/eOrca1_base.md">Install NEMO v5.0</a> </td></tr>
+      <td> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/eOrca1_base.md">eORCA1 base setup</a> </td></tr>
 </table>
 
 
