@@ -54,13 +54,11 @@ ROOT=$HOME
 echo $ROOT
 
 # Installation directories
-export WORKDIR=$ROOT/nemo-deps/sources
+export SRCSDIR=$ROOT/nemo-deps/sources
 export INSTDIR=$ROOT/nemo-deps/installs
-export XIOSDIR=$ROOT/nemo-deps/XIOS
-export NEMODIR=$ROOT
-mkdir -p $WORKDIR
+mkdir -p $SRCSDIR
 mkdir -p $INSTDIR
-mkdir -p $XIOSDIR
+mkdir -p $ROOT/nemo-deps/XIOS
 
 # compilers
 export CC=/usr/bin/mpicc
@@ -91,7 +89,7 @@ sudo apt-get install -y openmpi-bin libmpich-dev libopenmpi-dev gcc g++ gfortran
 ### Step 3: Install Zlib
 According to [zlib](https://www.zlib.net)'s documentation, **zlib** is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. The zlib data format is itself portable across platforms. It is a prerequisite for NetCDF (if I understood correctly). Check the website for the latest version and manually set this variable. Then, the installation procedure is the following.
 ```shell
-cd $WORKDIR
+cd $SRCSDIR
 LIB_VERSION="zlib-1.3.1"
 wget https://www.zlib.net/${LIB_VERSION}.tar.gz
 tar xvfz ${LIB_VERSION}.tar.gz
@@ -112,7 +110,7 @@ You should check at the [download](https://support.hdfgroup.org/downloads/hdf5/h
 
 Once the version has been chosen, manually change the version (and check the link) and run the following:
 ```shell
-cd $WORKDIR
+cd $SRCSDIR
 LIB_VERSION="hdf5_1.14.6"
 wget https://github.com/HDFGroup/hdf5/archive/refs/tags/${LIB_VERSION}.tar.gz
 tar xvfz ${LIB_VERSION}.tar.gz
@@ -134,7 +132,7 @@ As for the HDF5, you can control the version of NetCDF on the github page, updat
 
 ```shell
 # install netcdf-c
-cd $WORKDIR
+cd $SRCSDIR
 LIB_VERSION="4.9.3"
 wget https://github.com/Unidata/netcdf-c/archive/refs/tags/v${LIB_VERSION}.tar.gz
 tar xvfz v${LIB_VERSION}.tar.gz
@@ -149,7 +147,7 @@ make install
 echo " " 
 
 # Install netcdf-fortran
-cd $WORKDIR
+cd $SRCSDIR
 LIB_VERSION="4.6.2"
 wget https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v${LIB_VERSION}.tar.gz
 tar xvfz v${LIB_VERSION}.tar.gz
@@ -167,8 +165,8 @@ echo " "
 
 ## Install XIOS
 ```shell
-mkdir -p $XIOSDIR
-cd $XIOSDIR
+mkdir -p $ROOT/nemo-deps/XIOS
+cd $ROOT/nemo-deps/XIOS
 svn co -r 2701 http://forge.ipsl.fr/ioserver/svn/XIOS/trunk xios-trunk
 rm -rf $(find . -iname .svn)
 cd ..
@@ -233,7 +231,7 @@ Once done, one can compile XIOS as
 [UDUNITS](https://docs.unidata.ucar.edu/udunits/current/#Unix) must be installed locally, as it is needed each time you open ncview. [Xaw](https://manpages.ubuntu.com/manpages/questing/man3/Xaw.3.html) (also known as Athena Widgets) is not necessary all the time, just at installation time.
 ```
 sudo-g5k apt-get install libxaw7-dev libudunits2-dev
-cd $WORKDIR
+cd $SRCSDIR
 wget https://downloads.unidata.ucar.edu/udunits/2.2.28/udunits-2.2.28.tar.gz
 tar -zxvf udunits-2.2.28.tar.gz
 cd udunits-2.2.28
