@@ -1,7 +1,5 @@
-<p align="right">
-    **Go to the next steps:**
-    - [Install NEMO v5.0](Install_NEMO.md)
-</p>
+<p align="right"> Go to the next steps:</p>
+<p align="right"> [Install NEMO v5.0](Install_NEMO.md)</p>
 
 
 # Nemo dependencies
