@@ -4,7 +4,7 @@
 - [Install dependencies](Install_dependencies.md)
 - [The safe way: use a Docker container](Docker.md)
 
-<table style="width: 100%;">
+<table style="width:1000px; margin:0 auto;">
   <tr><td>Left aligned stuff</td>
       <td class="alignRight">Right aligned stuff</td></tr>
 </table>
