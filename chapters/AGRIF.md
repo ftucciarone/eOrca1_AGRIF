@@ -197,6 +197,6 @@ and define the `AGRIF_FixedGrids.in` as
 0
 ```
 <p align="center">
-  <img src="figures/output_AtlaMed.png" />
+  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/figures/output_AtlaMed.png" />
 </p>
 
