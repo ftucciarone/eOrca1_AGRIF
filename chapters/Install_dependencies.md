@@ -1,5 +1,5 @@
 <p align="right"> Go to the next steps:</p>
-<p align="right"> [Install NEMO v5.0](Install_NEMO.md)</p>
+<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/tree/main/chapters/Install_NEMO.md">Install NEMO v5.0</a> </p>
 
 
 # Nemo dependencies
