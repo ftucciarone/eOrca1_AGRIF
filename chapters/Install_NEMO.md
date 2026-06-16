@@ -4,10 +4,9 @@
 - [Install dependencies](Install_dependencies.md)
 - [The safe way: use a Docker container](Docker.md)
 
-​<p style="text-align:left;">
-    This text is left aligned
-    <span style="float:right;">This text is right aligned</span>
-    </p>
+<p style="text-align: left; width:49%; display: inline-block;">LEFT</p>
+<p style="text-align: right; width:50%;  display: inline-block;">RIGHT</p>
+
 
 
 # Downloading and compiling NEMO 5.0.1
