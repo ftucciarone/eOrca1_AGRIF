@@ -1,12 +1,15 @@
-
-.bro-code{
-    display:flex;
-    align-items:center;
-}
-<p class="bro-code">
-      <img src="https://github.com/AleixMT/AleixMT/assets/23342150/a802e799-cfcf-4add-ae22-0aa96bbecb6c" alt="lol-haha" style="height:3.8cm;">
-      <img src="https://komarev.com/ghpvc/?username=aleixmt&label=Profile%20views&color=0e75b6&style=flat" alt="aleixmt" style="display:inline-block;vertical-align: middle;"> 
-    </p>
+<div id="image-table" align="center">
+    <table>
+        <tr>
+            <td style="padding:10px">
+                <img src="https://github.com/AleixMT/AleixMT/assets/23342150/a802e799-cfcf-4add-ae22-0aa96bbecb6c"/>
+            </td>
+            <td style="padding:10px">
+                <img src="https://github.com/AleixMT/AleixMT/assets/23342150/a802e799-cfcf-4add-ae22-0aa96bbecb6c"/>
+            </td>
+        </tr>
+    </table>
+</div>
 
 
 
