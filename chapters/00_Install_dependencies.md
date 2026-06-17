@@ -253,4 +253,4 @@ make -j1
 make install
 ```
 <p align="right"> <b>Go to the next steps: </b></p>
-<p align="right"> <a https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md">Install NEMO v5.0</a> </p>
+<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md">Install NEMO v5.0</a> </p>
