@@ -1,5 +1,5 @@
 <div id="image-table" align="center">
-    <table>
+    <table style="border-collapse: collapse; border: none;">
         <tr>
             <td style="padding:100px">
                 <img src="https://github.com/AleixMT/AleixMT/assets/23342150/a802e799-cfcf-4add-ae22-0aa96bbecb6c"/>
@@ -10,11 +10,7 @@
         </tr>
     </table>
 </div>
-<style>
-.tab {border-collapse:collapse;}
-.tab .first {border-bottom:1px solid #EEE;}
-.tab .second {border-top:1px solid #CCC;box-shadow: inset 0 1px 0 #CCC;}​
-</style>
+
 
 
 # AGRIF
