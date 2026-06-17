@@ -66,11 +66,10 @@
 
 We will refer to the direcory tree illustrated before. In particular, we will make use of the following folders:
 ```shell
-export WORKDIR=/home/ftucciarone/tethys/nemo-AGRIF
-export NEMODIR=/home/ftucciarone/tethys/nemo-AGRIF/nemo-5.0.1
-export TOOLDIR=/home/ftucciarone/tethys/nemo-AGRIF/nemo-5.0.1/tools
+export NEMODIR=$WORKDIR/nemo-5.0.1
+export TOOLDIR=$WORKDIR/nemo-5.0.1/tools
 ```
-Moreover
+Moreover, the content of the work direcroty `$WORKDIR` has to be populated with the input needed for the AGRIF tool. In particular, it will look like this 
 
 ```
 .
@@ -83,12 +82,38 @@ Moreover
     │       └── restarts/       # Contains the specific files to compute the restarts
     └── ...
 ```
+where `DOMAINcfg` will contain all the necessary files to use the NEMO tool `DOMAINcfg`, `eORCA1` will contain namelists updated to run NEMO eORCA1 with the zooms, while finally `restarts` contains those things needed to create the restart files.
+> [!WARNING]
+> In reproducing this experience, you might be tempted to skip this last folder, as you probably a;ready have your restart file. This is unfortunately wrong, as AGRIF will not only create new grids, but actually update also the parent grid. For this reason, there might be slight changes in your `domain_cfg.nc` file that renders the new domain incompatible with the new AGRIF simulation, even if you don't switch on the zoom. I don't know how to match old restarts to work with zooms, so the strategy adopted here is to re-do the spinup. Bummer, I know.
 
-
-
-
-
-
+## Creating the domain configuration files using `DOMAINcfg` tool:
+To compile the DOMAINcfg tool for AGRIF zooms, you need to add the `key_agrif` to your cpp file:
+```
+$TOOLDIR/DOMAINcfg/cpp_DOMAINcfg.fcm
+```
+After that you can compile the DOMAINcfg tool using this command:
+```
+cd $TOOLDIR
+./maketools -m [<your_machine>] -n DOMAINcfg
+```
+you can duplicate the configuration folder in order to make different configuration, in this case we will make three different configurations:
+```
+cp -r $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO Pacific
+cp -r $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO Atlantic_Medsea
+cp -r $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO Medsea
+```
+the first one being a zoom over the Pacific ocean, the second being a double zoom over the Atlantic and Mediterranean sea, the third being almost the same as before but "with less Atlantic" covered. 
+### `DOMAINcfg` folder
+Inside this folder we will make a copy od the original `domain_cfg.nc` file and we will donwload our reference bathymetry. We will work in this example with [GEBCO 2020 bathymetry](https://www.gebco.net/data-products/gridded-bathymetry-data/gebco-2020#compilations). 
+> [!WARNING]
+> As stressed multiple times, it is always better to refresh the `domain_cfg.nc` file before running the DOMAINcfg tool. Hence, a bash file called `make_zooms.sh` is created to pipeline the creation of the zooms and avoid mistakes:
+> ```
+> ```shell
+> cp $WORKDIR/input-eOrca1/input_fields/domain_cfg.nc .
+> ./make_namelist.py
+> ./make_domain_cfg.exe
+> ```
+> then make it executable as `chmod +x make_zooms.sh` and run it as `./make_zoom.sh` when you need to create the AGRIF zooms.
 
 
 
@@ -103,7 +128,7 @@ Moreover
 **Always copy `domain_cfg.nc` and bathymerty file into `DOMAINcfg` tool folder**, that is 
 ```shell
 cp $WORKDIR/input-eOrca1/input_fields/domain_cfg.nc $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/
-cp $WORKDIR/input-AGRIF/GEBCO_2020.nc $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/
+ln -sf $WORKDIR/input-AGRIF/GEBCO_2020.nc $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/
 ```
 #### AGRIF Grids setup
 For this example, the `AGRIF_FixedGrids.in` file will read
@@ -113,23 +138,12 @@ For this example, the `AGRIF_FixedGrids.in` file will read
 0
 ```
 
-## Creating the domain configuration files using `DOMAINcfg` tool:
+
 
 Once the `AGRIF_FixedGrids.in` is ready, one has to create a consistent set of meshes for the whole nested system. This step ensures that cell volumes agree at the grid interfaces. Volume matching, as well as child bathymetry interpolation from an external database is ensured by the DOMAINcfg tool located in `/tools/DOMAINcfg/`.
 
 
-To compile the DOMAINcfg tool for AGRIF zooms, you need to add the `key_agrif` to your cpp file:
-```
-/path/to/nemo-5.0.1/tools/DOMAINcfg/cpp_DOMAINcfg.fcm
-```
-After that you can compile the DOMAINcfg tool using this command:
-```
-./maketools -m [<your_machine>] -n DOMAINcfg
-```
-you can access the configuration folder with
-```
-cd /path/to/nemo-5.0.1/tools/tools/DOMAINcfg/cfgs/AGRIF_DEMO/
-```
+
 in this folder, you shall **copy** the `domain_cfg.nc` of your configuration and the external bathymetry file if needed (in this example, `GEBCO_2020.nc`).
 > :warning:	**WARNING** 
    DOMAINcfg will **overwrite** the original `domain_cgf.nc` file, so you shall **NEVER link the original** into the folder of DOMAINcfg but rather **make a hard copy**.
