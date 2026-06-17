@@ -170,6 +170,7 @@ cd $ROOT/nemo-deps/XIOS
 svn co -r 2701 http://forge.ipsl.fr/ioserver/svn/XIOS/trunk xios-trunk
 rm -rf $(find . -iname .svn)
 cd ..
+export XIOSDIR=$ROOT/nemo-deps/XIOS/xios-trunk
 ```
 The following steps are crucial. Inside the `xios-trunk/arch/` folder we need to set three different files with environment specifications, linking specifications and compiler specifications. To do so, we need to create an environment file `arch-GCC_LINUX_local.env` containing the following:
 ```shell
