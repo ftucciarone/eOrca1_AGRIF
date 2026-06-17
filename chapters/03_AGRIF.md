@@ -107,7 +107,6 @@ the first one being a zoom over the Pacific ocean, the second being a double zoo
 Inside this folder we will make a copy od the original `domain_cfg.nc` file and we will donwload our reference bathymetry. We will work in this example with [GEBCO 2020 bathymetry](https://www.gebco.net/data-products/gridded-bathymetry-data/gebco-2020#compilations). 
 > [!WARNING]
 > As stressed multiple times, it is always better to refresh the `domain_cfg.nc` file before running the DOMAINcfg tool. Hence, a bash file called `make_zooms.sh` is created to pipeline the creation of the zooms and avoid mistakes:
-> ```
 > ```shell
 > cp $WORKDIR/input-eOrca1/input_fields/domain_cfg.nc .
 > ./make_namelist.py
