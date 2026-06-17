@@ -31,7 +31,7 @@
 >     │   └── XIOS/             # XIOS base folder (if multiple versions are needed)
 >     │       ├── xios-trunk/   # target XIOS dir ($XIOSDIR)
 >     │       └── ...           # other XIOS versions to target
->     └── nemo-AGRIF/           # Work directory for this project ($WORKDIR)
+>     └── $WORKDIR/         # Work directory for this project
 >         ├── input-AGRIF/      # Inputs for AGRIF
 >         │   └── ...
 >         ├── input-eORCA1/     # Input for eORCA1
