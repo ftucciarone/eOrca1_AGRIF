@@ -142,7 +142,7 @@ plt.show()
 ```
 Once the `AGRIF_FixedGrids.in` is ready, one has to create a consistent set of meshes for the whole nested system. This step ensures that cell volumes agree at the grid interfaces. Volume matching, as well as child bathymetry interpolation from an external database is ensured by the DOMAINcfg tool located in `/tools/DOMAINcfg/`.
 
-#### Namelist setup
+### Namelist setup
 Parent domain will be defined based on the specifications of the namelist, either by reading a configuration file (ln_read_cfg = .true.) or by defining manually in your namelist (e.g. ppglam0, ppgphi0). Child domain will be defined based on `AGRIF_FixedGrids.in`, with respect to parent grid information.
 
 The first step is thus to modify the `namelist_cfg` file to adapt it to our needs. In this list, `cn_domcfg` is the name of the input/output grid file, `cn_topo` is the external topography file, `cn_bath` is the name of the bathymetry variable in the netCDF file, with `cn_lat` and `cn_lon` the names of the latitude and longitude variables int he netCDF file. 
@@ -247,7 +247,7 @@ cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/domain_cfg.nc .
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/AGRIF_FixedGrids.in .
 ```
 
-# Pacific Ocean refinement
+#### Pacific Ocean refinement
 For this refinement, the `AGRIF_FixedGrids.in` file reads
 ```shell
 1
@@ -255,9 +255,9 @@ For this refinement, the `AGRIF_FixedGrids.in` file reads
 0
 ```
 
-# Atlantic Ocean refinement
+#### Atlantic Ocean refinement
 
-# Atlantic-Mediterranean refinement
+#### Atlantic-Mediterranean refinement
 Set up the `DOMAINcfg` configuration as
 ```shell
 cp -r ./tools/DOMAINcfg/cfgs/AGRIF_DEMO ./tools/DOMAINcfg/cfgs/AtlaMed
