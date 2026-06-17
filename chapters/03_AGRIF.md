@@ -4,6 +4,50 @@
 
 
 
+
+
+
+
+
+
+
+
+```
+.
+└── $ROOT/                # Root folder for the project
+    ├── nemo-deps/          # Dependencies for XIOS/NEMO
+    │   ├── sources/          # Sources tarballs ($SRCSDIR)
+    │   ├── installs/         # Installation points ($INSTDIR)
+    │   └── XIOS/             # XIOS base folder (if multiple versions are needed)
+    │       ├── xios-trunk/     # target XIOS dir ($XIOSDIR)
+    │       └── ...             # other XIOS versions to target
+    └── nemo-AGRIF/         # Work directory for this project ($WORKDIR)
+        ├── input-AGRIF/      # Inputs for AGRIF
+        │   └── ...
+        ├── input-eORCA1/     # Input for eORCA1
+        │   └── ...
+        └── nemo-5.01/        # NEMO 5.0.1 run folder ($NEMODIR)
+            ├── arch/           # Architecture folder
+            ├── cfgs/           # Configurations folder
+            ├── ...
+            ├── tools/          # Tools folder ($TOOLDIR)
+            └── ...
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # AGRIF
 
 #### Prequel: Folder setup
