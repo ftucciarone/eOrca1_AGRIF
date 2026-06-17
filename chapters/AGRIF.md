@@ -1,3 +1,8 @@
+<style type="text/css">
+table {
+  border:1px solid black;
+}
+</style>
 <div id="image-table" align="center">
     <table style="border: none;">
         <tr>
