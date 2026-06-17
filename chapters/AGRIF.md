@@ -10,7 +10,11 @@
         </tr>
     </table>
 </div>
-
+<style>
+.tab {border-collapse:collapse;}
+.tab .first {border-bottom:1px solid #EEE;}
+.tab .second {border-top:1px solid #CCC;box-shadow: inset 0 1px 0 #CCC;}​
+</style>
 
 
 # AGRIF
