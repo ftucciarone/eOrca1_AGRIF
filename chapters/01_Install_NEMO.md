@@ -1,5 +1,5 @@
 <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/00_Install_dependencies.md" class="previous">&laquo; Previous</a>
-<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md" class="next">Next &raquo;</a>
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/02_eOrca1_base.md" class="next">Next &raquo;</a>
 
 
 
@@ -47,3 +47,5 @@ and then remove it if not needed
 ```shell
 ./makenemo -m 'auto' -r GYRE_PISCES -n 'MY_GYRE' -j 8 clean_config
 ```
+<p align="right"> <b>Go to the next steps: </b></p>
+<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/02_eOrca1_base.md">Setup eORCA 1</a> </p>
