@@ -23,7 +23,7 @@ Nemo requires a set of fairly complicated dependencies. Among these we have
 Other important libraries and tools to be installed are svn, wget, git, make 
 
 > [!WARNING]
-> We will install also libcurl4-openssl-dev, m4, liburi-perl, libxml2-dev, but frankly I don't know what they are or why we are doing this. The original tutorial by Romain Caneill included them, and I have no reasons to doubt 
+> We will install also libcurl4-openssl-dev, m4, liburi-perl, libxml2-dev, but frankly I don't know what they are or why we are doing this. The original tutorial by Romain Caneill included them, and I have no reasons to doubt him.
 
 ### Step 1: Define the installation parameters
 This procedure will create directories, download tarballs and sources, install libraries. In particular, it will create folders to manage easily the installation points. The final structure will be as the following tree:
