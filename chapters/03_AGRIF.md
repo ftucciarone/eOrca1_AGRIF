@@ -46,24 +46,7 @@
 > The content of each folder explained in the previous (in the case of `nemo-deps` and subfolders) or in the next sections.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # AGRIF
-
 We will refer to the direcory tree illustrated before. In particular, we will make use of the following folders:
 ```shell
 export NEMODIR=$WORKDIR/nemo-5.0.1
@@ -116,36 +99,48 @@ Inside this folder we will make a copy od the original `domain_cfg.nc` file and 
 
 
 
-
-
-
-
-
-
-
-#### Safety measures:
-**Always copy `domain_cfg.nc` and bathymerty file into `DOMAINcfg` tool folder**, that is 
-```shell
-cp $WORKDIR/input-eOrca1/input_fields/domain_cfg.nc $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/
-ln -sf $WORKDIR/input-AGRIF/GEBCO_2020.nc $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/
-```
-#### AGRIF Grids setup
-For this example, the `AGRIF_FixedGrids.in` file will read
-```shell
+### Define the AGRIF zoom positioning
+To run AGRIF you need a configuration file that will define the hierarchy of all the subdomains: `AGRIF_FixedGrids.in`. This file is necessary either to run your model, but also if you need to create the `domain_cfg.nc` files for your models, as will be explained later.
+Bellow is how `AGRIF_FixedGrids.in` looks like in the test case example for AGRIF_DEMO:
+```txt
+2
+45 85 52 94 1 1 1
+121 146 113 133 4 4 4
+0
 1
-108 208  65 165 1 1 1
+20 60 27 60 3 3 3
 0
 ```
+The first line indicates the number of zooms in the parent larger domain (2). The following lines indicate the position of these nested domains in the parent grid (e.g. imin=45, imax=85, jmin=52, jmax=94). The last three values in these lines indicate the horizontal (rx and ry) and time (rt) refinement of each nested model (e.g. rx=4, ry=4, rt=4 for zoom 2). Please note that in this example zoom 1 has the same resolution as the parent, so in this case the refinement is always equals to 1. The following lines indicate the subsequent multiple nesting configuration, if there is. In the zoom 1 there is no embedded zoom domain, so it is 0. Inside zoom 2 there is a nested zoom 3, so we indicate 1 and the following lines follow the same rule as explained above.
+The following Python script plots the positioning of a first-level zoom over the parent grid.
+```python3
+#!/usr/bin/env python3
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+import netCDF4 as netcdf
+#
+# Open domain_cfg.nc eOrca1 (original grid)
+eOrca100_gridfile = "/home/ftucciarone/tethys/nemo-AGRIF/nemo-5.0.1/tools/DOMAINcfg/cfgs/AtlaMed/domain_cfg.nc"
+eOrca100_grid = netcdf.Dataset(eOrca100_gridfile, "r", format="NETCDF4")
 
+imin = 185
+imax = 325
+jmin = 208
+jmax = 265
 
-
+# Read bathymetry for a visual check
+eOrca100_bathy = eOrca100_grid.variables["bathy_metry"][0]
+cropped = eOrca100_bathy[jmin:jmax,imin:imax]
+# Visual check
+plt.rcParams['figure.dpi'] = 250  
+fig, axes = plt.subplots(1, 2)
+axes[0].imshow(eOrca100_bathy[::-1,:], cmap="BrBG", interpolation=None)
+axes[1].imshow(cropped[::-1,:], cmap="BrBG", interpolation=None)
+plt.tight_layout()
+plt.show()
+```
 Once the `AGRIF_FixedGrids.in` is ready, one has to create a consistent set of meshes for the whole nested system. This step ensures that cell volumes agree at the grid interfaces. Volume matching, as well as child bathymetry interpolation from an external database is ensured by the DOMAINcfg tool located in `/tools/DOMAINcfg/`.
-
-
-
-in this folder, you shall **copy** the `domain_cfg.nc` of your configuration and the external bathymetry file if needed (in this example, `GEBCO_2020.nc`).
-> :warning:	**WARNING** 
-   DOMAINcfg will **overwrite** the original `domain_cgf.nc` file, so you shall **NEVER link the original** into the folder of DOMAINcfg but rather **make a hard copy**.
 
 #### Namelist setup
 Parent domain will be defined based on the specifications of the namelist, either by reading a configuration file (ln_read_cfg = .true.) or by defining manually in your namelist (e.g. ppglam0, ppgphi0). Child domain will be defined based on `AGRIF_FixedGrids.in`, with respect to parent grid information.
@@ -251,36 +246,14 @@ Finally, copy all the important files into the `EXP00` folder of your configurat
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/domain_cfg.nc .
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/AGRIF_FixedGrids.in .
 ```
-## Templates for deciding the positioning of the zoom
-```python3
-#!/usr/bin/env python3
-import os
-import numpy as np
-import matplotlib.pyplot as plt
-import netCDF4 as netcdf
-#
-# Open domain_cfg.nc eOrca1 (original grid)
-eOrca100_gridfile = "/home/ftucciarone/tethys/nemo-AGRIF/nemo-5.0.1/tools/DOMAINcfg/cfgs/AtlaMed/domain_cfg.nc"
-eOrca100_grid = netcdf.Dataset(eOrca100_gridfile, "r", format="NETCDF4")
-
-imin = 185
-imax = 325
-jmin = 208
-jmax = 265
-
-# Read bathymetry for a visual check
-eOrca100_bathy = eOrca100_grid.variables["bathy_metry"][0]
-cropped = eOrca100_bathy[jmin:jmax,imin:imax]
-# Visual check
-plt.rcParams['figure.dpi'] = 250  
-fig, axes = plt.subplots(1, 2)
-axes[0].imshow(eOrca100_bathy[::-1,:], cmap="BrBG", interpolation=None)
-axes[1].imshow(cropped[::-1,:], cmap="BrBG", interpolation=None)
-plt.tight_layout()
-plt.show()
-```
 
 # Pacific Ocean refinement
+For this refinement, the `AGRIF_FixedGrids.in` file reads
+```shell
+1
+108 208  65 165 1 1 1
+0
+```
 
 # Atlantic Ocean refinement
 
