@@ -171,7 +171,7 @@ svn co -r 2701 http://forge.ipsl.fr/ioserver/svn/XIOS/trunk xios-trunk
 rm -rf $(find . -iname .svn)
 cd ..
 ```
-then we need an environment file: `arch-GCC_LINUX_local.env`
+The following steps are crucial. Inside the `xios-trunk/arch/` folder we need to set three different files with environment specifications, linking specifications and compiler specifications. To do so, we need to create an environment file `arch-GCC_LINUX_local.env` containing the following:
 ```shell
 # ATTENTION INSTDIR must be defined before
 
@@ -181,8 +181,7 @@ export HDF5_LIB_DIR=$INSTDIR/lib
 export NETCDF_INC_DIR=$INSTDIR/include
 export NETCDF_LIB_DIR=$INSTDIR/lib
 ```
-
-an fcm file: `arch-GCC_LINUX_local.fcm`
+Then we need to create a fcm file: `arch-GCC_LINUX_local.fcm` containing the following:
 ```shell
 ################################################################################
 ###################                Projet XIOS               ###################
@@ -209,7 +208,7 @@ an fcm file: `arch-GCC_LINUX_local.fcm`
 %FPP            cpp -P
 %MAKE           make
 ```
-and finally a path file:`arch-GCC_LINUX_local.path`
+And finally create a path file `arch-GCC_LINUX_local.path` containing:
 ```shell
 NETCDF_INCDIR="-I$NETCDF_INC_DIR"
 NETCDF_LIBDIR="-Wl,-rpath,$NETCDF_LIB_DIR -L$NETCDF_LIB_DIR"
@@ -227,6 +226,7 @@ Once done, one can compile XIOS as
 ```shell
 ./make_xios --arch GCC_LINUX_local --job 16
 ```
+Notice that the name of the architecture chosen, `GCC_LINUX_local` is the same as prescribed by the `.env`, `.fcm` and `.path` files.
 ## Install ncview (optional but nice to have)
 [UDUNITS](https://docs.unidata.ucar.edu/udunits/current/#Unix) must be installed locally, as it is needed each time you open ncview. [Xaw](https://manpages.ubuntu.com/manpages/questing/man3/Xaw.3.html) (also known as Athena Widgets) is not necessary all the time, just at installation time.
 ```
