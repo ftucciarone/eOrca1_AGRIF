@@ -9,9 +9,9 @@
 This README.md serves as an Table of Contents.
 
 **Prerequisites:**
-- [Install dependencies](chapters/Install_dependencies.md)
-- [Install NEMO v5.0](chapters/Install_NEMO.md)
-- [eORCA1 configuration setup](chapters/eOrca1_base)
+- [Install dependencies](chapters/00_Install_dependencies.md)
+- [Install NEMO v5.0](chapters/01_Install_NEMO.md)
+- [eORCA1 configuration setup](chapters/02_eOrca1_base)
 
 > [!WARNING]
 > In the following, we will make systematically use of some folder location. To ease the process, you are invited to define the main folders are environment variables, like
