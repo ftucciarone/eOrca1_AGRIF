@@ -12,11 +12,11 @@
 
 
 
-```bash
+```
 .
 └── $ROOT/                # Root folder for the project
     ├── nemo-deps/          # Dependencies for XIOS/NEMO
-    │   ├── sources/          # Sources tarballs ($SRCSDIR)
+    │   ├── sources/          # Sources tarballs (*$SRCSDIR*)
     │   ├── installs/         # Installation points ($INSTDIR)
     │   └── XIOS/             # XIOS base folder (if multiple versions are needed)
     │       ├── xios-trunk/     # target XIOS dir ($XIOSDIR)
