@@ -1,20 +1,4 @@
-<style type="text/css">
-table {
-  border:1px solid black;
-}
-</style>
-<div id="image-table" align="center">
-    <table style="border: none;">
-        <tr>
-            <td style="border: none; padding:100px">
-                <img src="https://github.com/AleixMT/AleixMT/assets/23342150/a802e799-cfcf-4add-ae22-0aa96bbecb6c"/>
-            </td>
-            <td style="border: none; padding:100px">
-                <img src="https://github.com/AleixMT/AleixMT/assets/23342150/a802e799-cfcf-4add-ae22-0aa96bbecb6c"/>
-            </td>
-        </tr>
-    </table>
-</div>
+<a href="xxx.html">Back</a>|<a href="xxx.html">Next</a>
 
 
 
