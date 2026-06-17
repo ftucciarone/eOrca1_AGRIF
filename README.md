@@ -1,4 +1,4 @@
-# Building an eORCA 1$`^{\circ}`$ configuration with AGRIF zooms
+# Building an eORCA 1° configuration with AGRIF zooms
 <p align="center">
   <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/figures/med-Orca_global.png" width="400" height="400"/>
   <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/figures/med-Orca_local.png" width="400" height="400"/>
