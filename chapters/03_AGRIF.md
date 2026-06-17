@@ -12,7 +12,7 @@
 
 
 
-```
+```bash
 .
 └── $ROOT/                # Root folder for the project
     ├── nemo-deps/          # Dependencies for XIOS/NEMO
