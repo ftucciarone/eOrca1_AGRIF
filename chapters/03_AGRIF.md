@@ -6,8 +6,6 @@
 
 [AGRIF](https://agrif.imag.fr) (Adaptive Grid Refinement In Fortran) is a library that allows the seamless space and time refinement over rectangular regions in NEMO. Refinement factors can be odd or even (usually lower than 5 to maintain stability). Interaction between grids is “two-way” in the sense that the parent grid feeds the child grid open boundaries and the child grid provides volume/area weighted averages of prognostic variables once a given number of time steps are completed. This page provide guidelines for how to use AGRIF in NEMO. For a more technical description of the library itself, please refer to the [User's guide](https://agrif.imag.fr/agrifusersguide.html) [(pdf)](https://agrif.imag.fr/_downloads/agrifdoc_usersguide.pdf) or the [Reference manual](https://agrif.imag.fr/DoxygenGeneratedDoc/html/index.html) [(pdf)](https://agrif.imag.fr/_downloads/refman.pdf).
 
-This README.md serves as an Table of Contents.
-
 **Prerequisites:**
 - [Install dependencies](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/00_Install_dependencies.md)
 - [Install NEMO v5.0](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md)
@@ -66,12 +64,41 @@ This README.md serves as an Table of Contents.
 
 # AGRIF
 
-#### Prequel: Folder setup
+We will refer to the direcory tree illustrated before. In particular, we will make use of the following folders:
 ```shell
 export WORKDIR=/home/ftucciarone/tethys/nemo-AGRIF
 export NEMODIR=/home/ftucciarone/tethys/nemo-AGRIF/nemo-5.0.1
 export TOOLDIR=/home/ftucciarone/tethys/nemo-AGRIF/nemo-5.0.1/tools
 ```
+Moreover
+
+```
+.
+└── $ROOT/                # Root folder for the project
+    ├── ...             
+    ├── $WORKDIR/         # Work directory for this project
+    │   └── input-AGRIF/      # Inputs for AGRIF
+    │       ├── DOMAINcfg/      # Contains the specific files for the DOMAINcfg tool
+    │       ├── eORCA1/         # Contains the namelists to run eORCA with AGRIF
+    │       └── restarts/       # Contains the specific files to compute the restarts
+    └── ...
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #### Safety measures:
 **Always copy `domain_cfg.nc` and bathymerty file into `DOMAINcfg` tool folder**, that is 
 ```shell
