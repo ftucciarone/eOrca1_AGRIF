@@ -1,4 +1,7 @@
 
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md" class="previous">&laquo; Previous</a>
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/03_AGRIF.md" class="next">Next &raquo;</a>
+
 ## Download the data repository (courtesy of Casimir de Lavergne [<img style="position:absolute; top:0px;" width="20px" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" />](https://orcid.org/0000-0001-9267-7390))
 > [!WARNING] 
 > The author of this repository, Francesco L. Tucciarone, was not involved in the development of the original configuration, thus he shall not be referenced. When using the configuration from this repository, only cite the original work done by Casimir de Lavergne and the other contributors. Minor adjustements were done to port the original configuration (running with NEMO 4.2.2) to NEMO 5.0.1, but they were almost trivial and not enough to grant F.L.T. authorship.
