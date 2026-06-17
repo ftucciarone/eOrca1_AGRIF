@@ -1,13 +1,9 @@
 # Building an eORCA 1$`^{\circ}`$ configuration with AGRIF zooms
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-  <a href="https://www.linkedin.com/in/xxxxxxxxx">
-    <img width="400" src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/figures/med-Orca_global.png" alt="LinkedIn"/>
-  </a>
-  <a href="https://www.xing.com/profile/xxxxxxxxxxxxxx">
-    <img width="400" src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/figures/med-Orca_local.png" alt="Xing"/>
-  </a>
-</div>
+<p align="center">
+      <img src="https://github.com/AleixMT/AleixMT/assets/23342150/a802e799-cfcf-4add-ae22-0aa96bbecb6c" alt="lol-haha" style="height:3.8cm;">
+      <img src="https://komarev.com/ghpvc/?username=aleixmt&label=Profile%20views&color=0e75b6&style=flat" alt="aleixmt" style="display:inline-block;vertical-align: middle;"> 
+    </p>
 
 
 
