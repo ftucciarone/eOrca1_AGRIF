@@ -1,4 +1,4 @@
-<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md" class="next">Next &raquo;</a>
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/01_Install_NEMO.md" class="next">Next &raquo;</a>
 
 # Nemo dependencies
 > [!WARNING]
@@ -9,7 +9,7 @@
 > * [Romain Caneill](https://romaincaneill.fr), (role unknown) wrote a great [apptainer](https://github.com/rcaneill/xnemogcm_test_data) with all the dependencies;
 > * [Julian Mak](https://julianmak.github.io), NEMO System Team member, wrote incredible notes and [made them available](https://nemo-related.readthedocs.io/en/latest/index.html);
 > * [Sebastian Masson](https://forge.nemo-ocean.eu/users/smasson/snippets), NEMO System Team member;
-> * [Yann Meurdesoif](chapters/Install_dependencies.md), main developer and maintainer of XIOS. Wrote (I can imagine alongside his collaborators) the [XIOS wiki](https://lmdz-forge.lmd.jussieu.fr/mediawiki/Planets/index.php/The_XIOS_Library), containing a lot of tips and insights, and this [bash template](https://web.lmd.jussieu.fr/~lmdz/pub/script_install/install_netcdf4_hdf5.bash) for the prerequisites.
+> * [Yann Meurdesoif](docs/Install_dependencies.md), main developer and maintainer of XIOS. Wrote (I can imagine alongside his collaborators) the [XIOS wiki](https://lmdz-forge.lmd.jussieu.fr/mediawiki/Planets/index.php/The_XIOS_Library), containing a lot of tips and insights, and this [bash template](https://web.lmd.jussieu.fr/~lmdz/pub/script_install/install_netcdf4_hdf5.bash) for the prerequisites.
 
 
 Nemo requires a set of fairly complicated dependencies. Among these we have 
@@ -255,4 +255,4 @@ make -j1
 make install
 ```
 <p align="right"> <b>Go to the next step: </b></p>
-<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md">Install NEMO v5.0</a> </p>
+<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/01_Install_NEMO.md">Install NEMO v5.0</a> </p>
