@@ -1,15 +1,15 @@
 # Building an eORCA 1$`^{\circ}`$ configuration with AGRIF zooms
 <p align="center">
-  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/figures/med-Orca_global.png" width="400" height="400"/>
-  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/figures/med-Orca_local.png" width="400" height="400"/>
+  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/figures/med-Orca_global.png" width="400" height="400"/>
+  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/figures/med-Orca_local.png" width="400" height="400"/>
 </p>
 
 [AGRIF](https://agrif.imag.fr) (Adaptive Grid Refinement In Fortran) is a library that allows the seamless space and time refinement over rectangular regions in NEMO. Refinement factors can be odd or even (usually lower than 5 to maintain stability). Interaction between grids is “two-way” in the sense that the parent grid feeds the child grid open boundaries and the child grid provides volume/area weighted averages of prognostic variables once a given number of time steps are completed. This page provide guidelines for how to use AGRIF in NEMO. For a more technical description of the library itself, please refer to the [User's guide](https://agrif.imag.fr/agrifusersguide.html) [(pdf)](https://agrif.imag.fr/_downloads/agrifdoc_usersguide.pdf) or the [Reference manual](https://agrif.imag.fr/DoxygenGeneratedDoc/html/index.html) [(pdf)](https://agrif.imag.fr/_downloads/refman.pdf).
 
 **Prerequisites:**
-- [Install dependencies](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/00_Install_dependencies.md)
-- [Install NEMO v5.0](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md)
-- [eORCA1 configuration setup](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/02_eOrca1_base)
+- [Install dependencies](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/00_Install_dependencies.md)
+- [Install NEMO v5.0](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/01_Install_NEMO.md)
+- [eORCA1 configuration setup](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/02_eOrca1_base)
 
 > [!WARNING]
 > In the following, we will make systematically use of some folder location. To ease the process, you are invited to define the main folders are environment variables, like
