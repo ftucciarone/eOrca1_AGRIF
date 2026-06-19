@@ -1,5 +1,5 @@
-<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/01_Install_NEMO.md" class="previous">&laquo; Previous</a>
-<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/03_AGRIF.md" class="next">Next &raquo;</a>
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/01_Install_NEMO.md" class="previous">&laquo; Previous</a>
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/03_AGRIF.md" class="next">Next &raquo;</a>
 
 ## Download the data repository (courtesy of Casimir de Lavergne [<img style="position:absolute; top:0px;" width="20px" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" />](https://orcid.org/0000-0001-9267-7390))
 > [!WARNING] 
@@ -121,4 +121,4 @@ chmod +x make_links.sh
 and finally execute it as `./make_links.sh`. This will create links to the static files inside the experiment folder, so that the namelist will find all the necessary data.
 
 <p align="right"> <b>Go to the next step: </b></p>
-<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/03_AGRIF.md">Setup AGRIF</a> </p>
+<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/03_AGRIF.md">Setup AGRIF</a> </p>
