@@ -1,5 +1,5 @@
-<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/00_Install_dependencies.md" class="previous">&laquo; Previous</a>
-<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/02_eOrca1_base.md" class="next">Next &raquo;</a>
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/00_Install_dependencies.md" class="previous">&laquo; Previous</a>
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/02_eOrca1_base.md" class="next">Next &raquo;</a>
 
 
 
@@ -28,7 +28,7 @@ The NEMO Ocean Engine Reference manual has been updated for version 5.0 and can 
 > cd arch
 > ./build_arch-auto.sh --NETCDF_C_prefix /path/to/nc-config --NETCDF_F_prefix /path/to/nf-config --HDF5_prefix /path/to/HDF5  --XIOS_prefix /path/to/XIOS
 > ```
-> where `/path/to/HDF5` can be found with `h5pcc -showconfig`. The path to XIOS is actually the download folder of XIOS. This tool with create the architecture file `arch/arch-auto.fcm`. If the instructions of [Install dependencies](chapters/Install_dependencies.md) were followed, then the following should work out of the box (exept for XIOS, whose version has to be chosen depending on the installation version of NEMO)
+> where `/path/to/HDF5` can be found with `h5pcc -showconfig`. The path to XIOS is actually the download folder of XIOS. This tool with create the architecture file `arch/arch-auto.fcm`. If the instructions of [Install dependencies](docs/Install_dependencies.md) were followed, then the following should work out of the box (exept for XIOS, whose version has to be chosen depending on the installation version of NEMO)
 > ```shell
 > cd arch
 > ./build_arch-auto.sh --NETCDF_C_prefix $INSTDIR --NETCDF_F_prefix $INSTDIR --HDF5_prefix $INSTDIR  --XIOS_prefix $XIOSDIR/xios-X.Y.X
@@ -49,4 +49,4 @@ and then remove it if not needed
 ```
 
 <p align="right"> <b>Go to the next step: </b></p>
-<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/chapters/02_eOrca1_base.md">Setup eORCA 1</a> </p>
+<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/02_eOrca1_base.md">Setup eORCA 1</a> </p>
