@@ -121,4 +121,4 @@ chmod +x make_links.sh
 and finally execute it as `./make_links.sh`. This will create links to the static files inside the experiment folder, so that the namelist will find all the necessary data.
 
 <p align="right"> <b>Go to the next step: </b></p>
-<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/03_AGRIF.md">Setup AGRIF</a> </p>
+<p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/README.md">Setup AGRIF</a> </p>
