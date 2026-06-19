@@ -247,6 +247,6 @@ cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/domain_cfg.nc .
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/AGRIF_FixedGrids.in .
 ```
 
-# [Atlantic-Mediterranean refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_Pacific/Pacific.md)
+# [Pacific Ocean refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_Pacific/Pacific.md)
 # [Atlantic-Mediterranean refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_MedAtlantic/MedAtlantic.md)
-# [Atlantic-Mediterranean refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_MedORCA/MedORCA.md)
+# [Mediterranean Sea refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_MedORCA/MedORCA.md)
