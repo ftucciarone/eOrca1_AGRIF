@@ -247,15 +247,6 @@ cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/domain_cfg.nc .
 cp $TOOLDIR/DOMAINcfg/cfgs/AGRIF_DEMO/AGRIF_FixedGrids.in .
 ```
 
-#### Pacific Ocean refinement
-For this refinement, the `AGRIF_FixedGrids.in` file reads
-```shell
-1
-108 208  65 165 1 1 1
-0
-```
-
-#### Atlantic Ocean refinement
-
-
-# [Atlantic-Mediterranean refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_MedAtlantic/MedAtlantic.md).
+# [Atlantic-Mediterranean refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_Pacific/Pacific.md)
+# [Atlantic-Mediterranean refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_MedAtlantic/MedAtlantic.md)
+# [Atlantic-Mediterranean refinement](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/input-AGRIF/zoom_MedORCA/MedORCA.md)
