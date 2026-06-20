@@ -47,12 +47,6 @@ ocean_depth = mpl.colors.LinearSegmentedColormap.from_list('terrain_map', ocean_
 divnorm = mpl.colors.TwoSlopeNorm(vmin=-5000., vcenter=0, vmax=1)
 
 base_dir = "/home/ftucciarone/tethys/nemo-AGRIF/nemo-5.0.1/tools/DOMAINcfg/cfgs/AtlaMed/"
-
-#
-# Open domain_cfg.nc eOrca1 (original grid)
-grid_files = [base_dir + "domain_cfg.nc",
-              base_dir + "1_domain_cfg.nc",
-              base_dir + "2_domain_cfg.nc"]
 titles = ["eORCA 1$^{\circ}$", "Atlantic 1/4$^{\circ}$", "Mediterranean 1/12$^{\circ}$"]
 
 imin, imax, jmin, jmax = [], [], [], []
@@ -112,4 +106,5 @@ for idx in range(grid_count):
     else:
         if titles: fig.axes[idx].set_title(titles[idx], fontsize=20)
 
-plt.show()```
+plt.show()
+```
