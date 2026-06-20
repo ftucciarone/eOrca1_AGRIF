@@ -21,7 +21,7 @@ and define the `AGRIF_FixedGrids.in` as
 360 567 98 195 3 3 3
 0
 ```
-This setup produces the bathymetry files shown at the top of the page.
+This setup produces the bathymetry files shown at the top of the page. We have opted to refine the first grid with a factor 4 and the second with a factor 3 to minimize the "resolution jump" close to the target area (the Mediterranean). Moreover, a resolution of 0.25° over the Gulf Stream opens to comparison with the work of Contreras and Marchesiello (future work, need paper).
 
 ### Atlantic 4 configuration
 
