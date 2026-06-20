@@ -28,7 +28,7 @@ This setup produces the bathymetry files shown at the top of the page.
 This work is based on the configuration that has been described in
 > Bernard, B., Madec, G., Penduff, T. et al. Impact of partial steps and momentum advection schemes in a global ocean circulation model at eddy-permitting resolution. Ocean Dynamics 56, 543–567 (2006). DOI: [10.1007/s10236-006-0082-1](https://doi.org/10.1007/s10236-006-0082-1)
 
-In particular, we take the following as a reference
+In particular, we take the following as a reference (section 2.2.3, *Numerical characteristics*)
 
 *Other options worth noting in ORCA-R025 and all DRAKKAR configurations are:
 (i) a TVD (Total Variance Diminishing) advection scheme for tracers (Levy et al., 2001) which, compared to the centred scheme, avoids the generation of overshoots in case of sharp gradients;
