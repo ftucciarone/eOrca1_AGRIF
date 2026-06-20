@@ -1,6 +1,6 @@
 # Med12-Atlantic4 configuration
 <p align="center">
-  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/figures/output_AtlaMed.png" width="400" height="400"/>
+  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/figures/output_AtlaMed.png" width="800" height="800"/>
 </p>
 </br>
 
