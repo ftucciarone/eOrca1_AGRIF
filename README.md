@@ -9,7 +9,7 @@
 **Prerequisites:**
 - [Install dependencies](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/00_Install_dependencies.md)
 - [Install NEMO v5.0](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/01_Install_NEMO.md)
-- [eORCA1 configuration setup](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/02_eOrca1_base)
+- [eORCA1 configuration setup](https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/02_eOrca1_base.md)
 
 > [!WARNING]
 > In the following, we will make systematically use of some folder location. To ease the process, you are invited to define the main folders are environment variables, like
