@@ -23,7 +23,7 @@ and define the `AGRIF_FixedGrids.in` as
 ```
 This setup produces the bathymetry files shown at the top of the page.
 
-### Atlantic 4 grid
+### Atlantic 4 configuration
 
 This work is based on the configuration that has been described in
 > Bernard, B., Madec, G., Penduff, T. et al. Impact of partial steps and momentum advection schemes in a global ocean circulation model at eddy-permitting resolution. Ocean Dynamics 56, 543–567 (2006). DOI: [10.1007/s10236-006-0082-1](https://doi.org/10.1007/s10236-006-0082-1)
@@ -35,7 +35,7 @@ In particular, we take the following as a reference (section 2.2.3, *Numerical c
 (ii) a laplacian lateral isopycnal diffusion on tracers ($`300 m^{2}s^{-1}`$ at the equator and decreasing poleward proportionally to the grid size), and
 (iii) a horizontal biharmonic viscosity for momentum ($`-1.5\times 10^{11} m^{4}s^{-1}`$ at the equator and decreasing poleward as the cube of the grid size). In the equatorial wave guide, a laplacian viscosity ($`500 m^{2}s^{-1}`$) is added to the biharmonic operator at levels included in the upper 100 m, to better control the speed of the equatorial undercurrent. This method gave satisfying results in the CLIPPER model (Arhan et al., 2005). Surface boundary layer mixing and interior vertical mixing are parameterised according to a turbulent closure model (order 1.5) adapted to OPA by Blanke and Delecluse (1993). In case of static instability, a viscosity/diffusivity enhancement up to $`10 m^{2}s^{-1}`$ is used.*
 
-
+### Mediterranean 12 configuration
 
 
 ### Some useful scripts
