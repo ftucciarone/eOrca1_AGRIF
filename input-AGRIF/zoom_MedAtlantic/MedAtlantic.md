@@ -1,5 +1,7 @@
 # Med12-Atlantic4 configuration
-
+<p align="center">
+  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/figures/output_AtlaMed.png" />
+</p>
 Set up the `DOMAINcfg` configuration as
 ```shell
 cp -r ./tools/DOMAINcfg/cfgs/AGRIF_DEMO ./tools/DOMAINcfg/cfgs/AtlaMed
@@ -17,10 +19,8 @@ and define the `AGRIF_FixedGrids.in` as
 360 567 98 195 3 3 3
 0
 ```
-This setup produces the following bathymetry files.
-<p align="center">
-  <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/figures/output_AtlaMed.png" />
-</p>
+This setup produces the bathymetry files shown at the top of the page.
+
 
 
 
