@@ -112,5 +112,4 @@ for idx in range(grid_count):
     else:
         if titles: fig.axes[idx].set_title(titles[idx], fontsize=20)
 
-plt.show()
-```
+plt.show()```
