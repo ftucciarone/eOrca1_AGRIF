@@ -2,6 +2,7 @@
 <p align="center">
   <img src="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/figures/output_AtlaMed.png" />
 </p>
+
 Set up the `DOMAINcfg` configuration as
 ```shell
 cp -r ./tools/DOMAINcfg/cfgs/AGRIF_DEMO ./tools/DOMAINcfg/cfgs/AtlaMed
