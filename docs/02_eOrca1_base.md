@@ -1,5 +1,5 @@
 <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/01_Install_NEMO.md" class="previous">&laquo; Previous</a>
-<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/docs/03_AGRIF.md" class="next">Next &raquo;</a>
+<a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/README.md" class="next">Next &raquo;</a>
 
 ## Download the data repository (courtesy of Casimir de Lavergne [<img style="position:absolute; top:0px;" width="20px" src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" />](https://orcid.org/0000-0001-9267-7390))
 > [!WARNING] 
