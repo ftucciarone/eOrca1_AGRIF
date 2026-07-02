@@ -120,5 +120,9 @@ chmod +x make_links.sh
 ```
 and finally execute it as `./make_links.sh`. This will create links to the static files inside the experiment folder, so that the namelist will find all the necessary data.
 
+## Namelist
+The namelist for this configuration is actually [this one](https://github.com/ftucciarone/eORCA1/blob/nemo-5.0.1/namelist_cfg_5.0.1)
+> [!TIP]
+> FT: merging these two repo would be nice and tidy
 <p align="right"> <b>Go to the next step: </b></p>
 <p align="right"> <a href="https://github.com/ftucciarone/eOrca1_AGRIF/blob/main/README.md">Setup AGRIF</a> </p>
