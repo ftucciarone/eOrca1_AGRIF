@@ -1,4 +1,7 @@
 # DOMAINcfg user guide
+> [!WARNING]
+> This document was drafted with the assistance of Claude (Anthropic). The procedure here described has been tested in the example of the eOrca1 configuration and it is running well. 
+
 
 `DOMAINcfg` is a standalone NEMO tool (`tools/DOMAINcfg`) that produces
 `domain_cfg.nc` — the mesh/bathymetry file NEMO reads at startup, containing
