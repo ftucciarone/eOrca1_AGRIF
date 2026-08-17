@@ -298,6 +298,12 @@ run directory under its nest-prefixed name (`N_<weight_filename>.nc`) —
 the raw forcing data file itself stays unprefixed and shared across every
 grid; only the weight file is per-grid.
 
+> [!WARNING]
+> The following part of this document was drafted with the assistance of Claude (Anthropic).
+> it has not been checked (because my knowledge of the SCRIP package is null. I have left it
+> because it might be useful to some extent, do not expect is true 100%, take it with a
+> grain of salt.
+
 ## The SCRIP pipeline, explained
 
 Everything above is enough to generate weights for a real configuration
